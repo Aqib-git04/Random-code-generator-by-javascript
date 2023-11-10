@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random quote generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <div id="container">
+        <h1 id="heading">Random quote generator</h1>
+        <button id="button">Generate random quote</button>
+        <p id="randomquote">The random quote</p>
+    </div>
+    <script>
+        window.onload = function () {
+            getRandomQuote();
+        }
+        function getRandomQuote() 
+                     {
+            var btn = document.getElementById("button");
+            btn.onclick = function () {
+                var randomQuoteArray =
+                    [
+                        " Act as if what you do makes a difference. It does.",
+                        " Believe you can and youre halfway there. – Theodore Roosevelt.",
+                        " Life is like riding a bicycle. To keep your balance, you must keep moving.",
+                        " You are never too old to set another goal or to dream a nw dream.",
+                        " Believe you can and youre halfway there. – Theodore Roosevelt.",
+                        " Life is like riding a bicycle. To keep your balance, you must keep moving.",
+                        " You are never too old to set another goal or to dream a nw dream.",
+                        " Believe you can and youre halfway there. – Theodore Roosevelt.",
+                        " Act as if what you do makes a difference. It does.",
+                        "Live the Life of Your Dreams: Be brave enough to live the life of your dreams according to your vision and purpose instead of the expectations and opinions of others."
+                    ];
+
+
+                var randomQuote = document.getElementById("randomquote");
+
+                var randomNum = Math.floor(Math.random() * 10);
+
+                randomQuote.textContent = randomQuoteArray[randomNum];
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
